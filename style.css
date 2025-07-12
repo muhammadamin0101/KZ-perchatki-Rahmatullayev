@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+header {
+  background: linear-gradient(135deg, #1d3557, #457b9d);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+h2 {
+  margin-top: 0;
+  color: #1d3557;
+}
+
+.about p, .contact p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.products .gallery,
+.bottom-gloves .gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.products img,
+.bottom-gloves img {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeIn 1s ease forwards;
+}
+
+.products img:nth-child(1) { animation-delay: 0.2s; }
+.products img:nth-child(2) { animation-delay: 0.4s; }
+.products img:nth-child(3) { animation-delay: 0.6s; }
+
+.bottom-gloves img:nth-child(1) { animation-delay: 0.2s; }
+.bottom-gloves img:nth-child(2) { animation-delay: 0.4s; }
+.bottom-gloves img:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.glove:hover {
+  transform: scale(1.05);
+}
+
+.whatsapp {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 25px;
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  background: #1d3557;
+  color: white;
+  padding: 20px 0;
+  margin-top: 40px;
+}
